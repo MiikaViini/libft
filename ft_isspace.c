@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 11:52:51 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 11:24:46 by mviinika         ###   ########.fr       */
+/*   Created: 2021/12/15 10:08:10 by mviinika          #+#    #+#             */
+/*   Updated: 2021/12/15 10:21:14 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
-void	ft_strdel(char **as)
+int	ft_isspace(int c)
 {
-	free(*as);
-	*as = NULL;
+	if (c == ' ' || (c >= '\t' && c <= '\r' ))
+	{
+		return (1);
+	}
+	else
+		return (0);
 }

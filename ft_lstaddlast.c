@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddlast.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 11:52:51 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 11:24:46 by mviinika         ###   ########.fr       */
+/*   Created: 2021/12/13 11:06:40 by mviinika          #+#    #+#             */
+/*   Updated: 2021/12/13 14:05:45 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_lstaddlast(t_list **alst, t_list *new)
 {
-	free(*as);
-	*as = NULL;
+	t_list	*temp;
+
+	temp = *alst;
+	while (temp != NULL)
+	{
+		if (temp->next == NULL)
+		{
+			temp->next = new;
+			break ;
+		}
+		temp = temp->next;
+	}
 }

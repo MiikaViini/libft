@@ -6,7 +6,7 @@
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:13:57 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/10 10:13:46 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 11:03:02 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,11 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list*elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void	ft_lstaddlast(t_list **alst, t_list *new);
+void	ft_lstrev(t_list **alst);
+char	*ft_strrev(char *str);
+int		ft_isspace(int c);
+void	ft_swap(int *a, int *b);
+char	*ft_strndup(const char *s, size_t size);
 
 #endif

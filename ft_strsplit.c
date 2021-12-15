@@ -6,7 +6,7 @@
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 13:09:29 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 14:52:55 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 12:12:17 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	*ft_freewords(char **words, size_t i)
 	{
 		ft_strdel(&words[i]);
 	}
-	free(*words);
+	free(words);
 	return (NULL);
 }
 

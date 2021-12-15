@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 11:52:51 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 11:24:46 by mviinika         ###   ########.fr       */
+/*   Created: 2021/11/01 10:10:32 by mviinika          #+#    #+#             */
+/*   Updated: 2021/12/15 10:32:37 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
-
-void	ft_strdel(char **as)
+void	ft_swap(int *a, int *b)
 {
-	free(*as);
-	*as = NULL;
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
