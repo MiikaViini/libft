@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:22:21 by mviinika          #+#    #+#             */
-/*   Updated: 2021/11/30 10:30:48 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:21:45 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,6 @@
 
 int	ft_isprint(int c)
 {
-	int	res;
 
-	if (c >= 32 && c <= 126)
-	{
-		res = 1;
-	}
-	else
-	{
-		res = 0;
-	}
-	return (res);
+	return (c >= 32 && c <= 126);
 }

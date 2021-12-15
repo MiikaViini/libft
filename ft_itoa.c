@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 09:39:49 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:06:39 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 21:36:38 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static unsigned char	ft_lenint(int n)
 		{
 			n = n + 1;
 		}
+		len++;
 		n = n * -1;
 	}
 	while (n > 0)
@@ -73,7 +74,7 @@ char	*ft_itoa(int n)
 	n = ft_ismin(n);
 	n = ft_remsign(n);
 	i = 0;
-	num = (char *)malloc(sizeof(char) * (ft_lenint(n) + 1));
+	num = (char *)malloc(sizeof(char) * (ft_lenint(t) + 1));
 	if (!num)
 		return (NULL);
 	if (n == 0)

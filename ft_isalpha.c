@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:47:01 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 14:55:13 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:21:45 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	int	res;
-
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-	{
-		res = 1;
-	}
-	else
-	{
-		res = 0;
-	}
-	return (res);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

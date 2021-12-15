@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 10:08:10 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 10:21:14 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:21:45 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 int	ft_isspace(int c)
 {
-	if (c == ' ' || (c >= '\t' && c <= '\r' ))
-	{
-		return (1);
-	}
-	else
-		return (0);
+	return (c == ' ' || (c >= '\t' && c <= '\r' ));	
 }

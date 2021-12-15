@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:26:57 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 14:56:33 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:33:33 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_putstr(char const *s)
 {
-	while (*s)
-	{
-		ft_putchar(*s++);
-	}
+	write(1, s, ft_strlen((char *)s));
 }

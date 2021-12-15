@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:55:58 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:08:52 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:32:25 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
-	ft_putchar_fd('\n', fd);
+	write(fd, s, ft_strlen((char *)s));
+	write(fd, "\n", 1);
 }

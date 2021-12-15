@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 09:23:53 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 10:23:39 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/15 21:48:23 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	fresh->content = malloc(content_size);
 	if (!fresh->content)
 	{
+		free(fresh);
 		return (NULL);
 	}
 	ft_memcpy(fresh->content, content, content_size);
