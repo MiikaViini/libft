@@ -6,13 +6,13 @@
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:41:29 by mviinika          #+#    #+#             */
-/*   Updated: 2021/11/30 10:30:48 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/16 11:43:29 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

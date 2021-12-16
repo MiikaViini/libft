@@ -6,7 +6,7 @@
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:09:10 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:15:18 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/16 14:20:53 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	k = 0;
 	strlen = ft_strlen((char *)s);
 	fresh = (char *)malloc(sizeof(char) * (len + 1));
-	if (*s == '\0' || !fresh || strlen <= start)
+	if (!fresh)
 	{
-		return (NULL);
+		return (0);
 	}
 	while (len--)
 	{
@@ -32,3 +32,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	fresh[k] = '\0';
 	return (fresh);
 }
+
+/*if (*s == '\0' || !fresh || strlen <= start)
+	{
+		return (NULL);
+	}*/

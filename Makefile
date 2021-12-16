@@ -6,7 +6,7 @@
 #    By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 09:25:07 by mviinika          #+#    #+#              #
-#    Updated: 2021/12/15 12:52:18 by mviinika         ###   ########.fr        #
+#    Updated: 2021/12/16 10:38:59 by mviinika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ FLAGS = -Wall -Wextra -Werror -Wconversion
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRCS) -I $(INC) $(FLAGS)
+	gcc -c $(SRCS) $(FLAGS)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 clean:

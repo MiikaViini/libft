@@ -6,7 +6,7 @@
 /*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:13:57 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 11:03:02 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/16 12:01:25 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_memdel(void **ap);
 char	*ft_strdup(const char *s);
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -43,7 +43,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	ft_bzero(void *s, size_t n);
 void	ft_strclr(char *s);
-char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -86,7 +85,6 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list*elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void	ft_lstaddlast(t_list **alst, t_list *new);
 void	ft_lstrev(t_list **alst);
-char	*ft_strrev(char *str);
 int		ft_isspace(int c);
 void	ft_swap(int *a, int *b);
 char	*ft_strndup(const char *s, size_t size);
