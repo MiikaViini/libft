@@ -3,27 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
+/*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 09:39:49 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 21:36:38 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 20:19:45 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  "libft.h"
 
-static unsigned char	ft_lenint(int n)
+static size_t	ft_lenint(int n)
 {
 	unsigned char	len;
 
-	len = 0;
+	len = 1;
 	if (n < 0 )
 	{
 		if (n == -2147483648)
 		{
 			n = n + 1;
 		}
-		len++;
 		n = n * -1;
 	}
 	while (n > 0)
