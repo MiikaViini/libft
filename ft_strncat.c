@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 10:53:25 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:11:45 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:01:18 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	i = 0;
 	k = 0;
 	while (s1[i] != '\0')
-	{
 		i++;
-	}
 	while (s2[k] != '\0' && n--)
 	{
 		s1[i + k] = s2[k];

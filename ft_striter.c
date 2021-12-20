@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 13:30:49 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:10:26 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 13:59:43 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,5 @@
 void	ft_striter(char *s, void (*f)(char *))
 {
 	while (*s)
-	{
-		f(s);
-		s++;
-	}
+		f(s++);
 }

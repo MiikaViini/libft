@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:58:04 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:08:32 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:10:25 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*s;
 	char	*d;
-	size_t	i;
 
 	d = (char *)dst;
 	s = (char *)src;
-	i = 0;
 	if (!dst && !src)
 		return (NULL);
 	if (s < d)
@@ -28,9 +26,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		s = s + len - 1;
 		d = d + len - 1;
 		while (len--)
-		{
 			*d-- = *s--;
-		}
 	}
 	else if (src >= dst)
 	{

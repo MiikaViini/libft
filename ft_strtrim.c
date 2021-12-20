@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 09:46:16 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/09 08:56:18 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:03:05 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,9 @@
 static	int	ft_iswhitespace(const char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
 
 static size_t	ft_returnindex(const char *s)

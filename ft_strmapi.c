@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 11:16:17 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 14:18:43 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:00:44 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size = ft_strlen((char *)s);
 	fresh = (char *)malloc(sizeof(char) * (size + 1));
 	if (fresh == NULL)
-	{
 		return (NULL);
-	}
 	while (s[i])
 	{
 		fresh[i] = f(i, (char)s[i]);

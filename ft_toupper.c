@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:37:12 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:16:14 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:03:31 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@ int	ft_toupper(int c)
 	int	res;
 
 	if (c >= 97 && c <= 122)
-	{
 		res = c - 32;
-	}
 	else
-	{
 		res = c;
-	}
 	return (res);
 }

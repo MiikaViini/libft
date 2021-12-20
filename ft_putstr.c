@@ -6,7 +6,7 @@
 /*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:26:57 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 20:33:33 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 13:57:19 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr(char const *s)
 {
-	write(1, s, ft_strlen((char *)s));
+	write(1, s, ft_strlen(s));
 }

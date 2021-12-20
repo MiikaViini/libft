@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:51:16 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 13:59:43 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 13:55:26 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	*ft_memalloc(size_t size)
 
 	mem = malloc(sizeof(size_t) * size);
 	if (mem == NULL)
-	{
 		return (NULL);
-	}
 	ft_bzero(mem, size);
 	return (mem);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:50:14 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:15:57 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:03:26 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@ int	ft_tolower(int c)
 	int	res;
 
 	if (c >= 65 && c <= 90)
-	{
 		res = c + 32;
-	}
 	else
-	{
 		res = c;
-	}
 	return (res);
 }

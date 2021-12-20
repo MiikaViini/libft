@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:47:26 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:11:17 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 13:59:43 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!fresh)
 		return (NULL);
 	while (*s1)
-	{
 		*fresh++ = *s1++;
-	}
 	while (*s2)
-	{
 		*fresh++ = *s2++;
-	}
 	*fresh = '\0';
 	return (fresh - (i + l));
 }

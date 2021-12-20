@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+         #
+#    By: mviinika <mviinika>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 09:25:07 by mviinika          #+#    #+#              #
-#    Updated: 2021/12/16 10:38:59 by mviinika         ###   ########.fr        #
+#    Updated: 2021/12/20 14:35:27 by mviinika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,18 +41,22 @@ OBJ = $(SRCS:.c=.o)
 
 INC = libft.h
 
-FLAGS = -Wall -Wextra -Werror -Wconversion
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRCS) $(FLAGS)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	gcc -c $(FLAGS) $(SRCS) 
+	ar rcs $(NAME) $(OBJ)
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f libft.so
 
 re: fclean all
+
+so:
+	clang-11 -nostartfiles -fPIC $(FLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)

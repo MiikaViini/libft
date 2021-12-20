@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:34:59 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/09 15:09:00 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:02:33 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i + 1)
 	{
 		if (s[i] == c)
-		{
 			return ((char *)&s[i]);
-		}
 		i--;
 	}
 	return (NULL);

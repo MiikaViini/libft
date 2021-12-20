@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 13:09:29 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 12:12:17 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 13:52:27 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ char	**ft_strsplit(char const *s, char c)
 		return (NULL);
 	}
 	word_array = ft_words(string, c, ft_wordcount(string, c));
+	free(string);
 	return (word_array);
 }
