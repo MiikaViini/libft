@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
+/*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:03:50 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/20 13:51:30 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/20 20:06:38 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@ char	*ft_strrev(char *str)
 	size_t	i;
 	size_t	len;
 
-
 	len = ft_strlen(str);
 	i = 0;
 	while (str && i < len / 2)
 	{
 		c = str[i];
 		str[i] = str[len - i - 1];
-		str[len - i -1] = c;
+		str[len - i - 1] = c;
 		i++;
 	}
 	return (str);
