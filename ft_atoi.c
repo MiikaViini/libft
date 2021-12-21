@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 09:00:49 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/13 15:22:08 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:53:51 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,9 @@ static void	ft_sign(const char **str, char *sign)
 		(*str)++;
 	}
 	else if (**str == '+')
-	{
 		(*str)++;
-	}
 	while (**str == '0')
-	{
 		(*str)++;
-	}
 }
 
 int	ft_atoi(const char *str)

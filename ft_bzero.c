@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:19:25 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 14:54:58 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:53:51 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_bzero(void *s, size_t n)
 	d = (unsigned char *)s;
 	while (n--)
 	{
-		*d = '\0';
-		d++;
+		*d++ = '\0';
 	}
 }

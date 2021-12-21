@@ -6,7 +6,7 @@
 /*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 11:35:05 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/20 13:58:47 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:53:45 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strequ(char const *s1, char const *s2)
 	}
 	while (*s1 || *s2)
 	{
-		if (s1 != s2)
+		if (*s1 != *s2)
 			return (0);
 		s1++;
 		s2++;

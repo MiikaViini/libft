@@ -6,7 +6,7 @@
 /*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 09:39:49 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/15 21:36:38 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:53:51 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,11 @@ static unsigned char	ft_lenint(int n)
 {
 	unsigned char	len;
 
-	len = 0;
+	len = 1;
 	if (n < 0 )
 	{
 		if (n == -2147483648)
-		{
 			n = n + 1;
-		}
-		len++;
 		n = n * -1;
 	}
 	while (n > 0)
@@ -37,30 +34,22 @@ static unsigned char	ft_lenint(int n)
 static	int	ft_isminus(int n)
 {
 	if (n >= 0)
-	{
 		return (0);
-	}
 	else
-	{
 		return (1);
-	}
 }
 
 static	int	ft_remsign(int n)
 {
 	if (n <= 0)
-	{
 		return (n * -1);
-	}
 	return (n);
 }
 
 static	int	ft_ismin(int n)
 {
 	if (n == -2147483648)
-	{
 		n = n + 1;
-	}
 	return (n);
 }
 
