@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika < mviinika@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:34:45 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/08 15:13:42 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:57:44 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,13 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	i = 0;
 	k = 0;
 	if (*needle == '\0')
-	{
 		return ((char *)haystack);
-	}
 	while (haystack[i] != '\0')
 	{
 		while (needle[k] == haystack[i + k])
 		{
 			if (k == len - 1)
-			{
 				return ((char *)haystack + i);
-			}
 			k++;
 		}
 		k = 0;

@@ -6,7 +6,7 @@
 /*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 13:09:29 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/20 13:52:27 by mviinika         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:57:37 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ static	size_t	ft_wordcount(const char *s, char c)
 	while (s[i])
 	{
 		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
-		{
 			count++;
-		}
 		i++;
 	}
 	return (count);
@@ -36,9 +34,7 @@ static	char	*ft_word(char *s, char c)
 
 	start = s;
 	while (*s && *s != c)
-	{
 		s++;
-	}
 	*s = '\0';
 	return (ft_strdup(start));
 }
@@ -46,9 +42,7 @@ static	char	*ft_word(char *s, char c)
 static void	*ft_freewords(char **words, size_t i)
 {
 	while (i--)
-	{
 		ft_strdel(&words[i]);
-	}
 	free(words);
 	return (NULL);
 }
@@ -89,9 +83,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	string = ft_strdup((char *)s);
 	if (!s || !string)
-	{
 		return (NULL);
-	}
 	word_array = ft_words(string, c, ft_wordcount(string, c));
 	free(string);
 	return (word_array);
