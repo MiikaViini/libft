@@ -6,7 +6,7 @@
 #    By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 09:25:07 by mviinika          #+#    #+#              #
-#    Updated: 2021/12/20 20:27:01 by mviinika         ###   ########.fr        #
+#    Updated: 2022/01/03 23:02:41 by mviinika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,5 +53,10 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f $(NAME:.a=.so)
 
 re: fclean all
+
+so:
+	clang-11 -nostartfiles -fPIC $(FLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)

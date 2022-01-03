@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mviinika <mviinika>                        +#+  +:+       +#+        */
+/*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:18:23 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/20 13:57:46 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/01/03 22:58:50 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
-	char	ch;
 
-	ch = (char)c;
 	str = (char *)s;
-	while (*str != ch)
+	while (str && *str != '\0')
 	{
-		if (*str == '\0')
-			return (NULL);
+		if (*str == c)
+			return (str);
 		str++;
 	}
-	return (str);
+	return (NULL);
 }
