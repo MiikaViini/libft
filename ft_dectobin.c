@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dectobin.c                                         :+:      :+:    :+:   */
+/*   ft_dectobin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 13:48:10 by mviinika          #+#    #+#             */
-/*   Updated: 2022/02/13 15:22:22 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/03/01 09:52:34 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	dectobin(int dec)
+void	ft_dectobin(int dec)
 {
 	int		res;
 	int		bin[16];
@@ -28,19 +28,7 @@ void	dectobin(int dec)
 	}
 	while (i--)
 	{
-		printf("%d", bin[i]);
+		ft_putnbr(bin[i]);
 	}
-	printf("\n");
-}
-
-int	main(void)
-{
-	int	dec2;
-	int	dec;
-
-	dec = 67;
-	dec2 = dec >> 1;
-	dectobin(dec);
-	dectobin(dec2);
-	return (0);
+	ft_putchar('\n');
 }

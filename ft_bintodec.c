@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bintodec.c                                         :+:      :+:    :+:   */
+/*   ft_bintodec.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 08:43:09 by mviinika          #+#    #+#             */
-/*   Updated: 2022/03/01 09:42:29 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/03/01 09:52:32 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	bintodec(signed long long bin)
+int	ft_bintodec(signed long long bin)
 {
 	int	result;
 	int	bit;
