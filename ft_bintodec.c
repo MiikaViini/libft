@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   bintodec.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 10:10:32 by mviinika          #+#    #+#             */
-/*   Updated: 2022/03/01 09:43:24 by mviinika         ###   ########.fr       */
+/*   Created: 2022/02/11 08:43:09 by mviinika          #+#    #+#             */
+/*   Updated: 2022/03/01 09:42:29 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	ft_swap(int *a, int *b)
+int	bintodec(signed long long bin)
 {
-	*a ^= *b;
-	*b ^= *a;
-	*a ^= *b;
+	int	result;
+	int	bit;
+	int	i;
+
+	i = 0;
+	result = 0;
+	bit = 0;
+	while (bin)
+	{
+		bit = bin % 10;
+		bin /= 10;
+		result += ft_pow(2, i) * bit;
+		i++;
+	}
+	return (result);
 }

@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 10:10:32 by mviinika          #+#    #+#             */
-/*   Updated: 2022/03/01 09:43:24 by mviinika         ###   ########.fr       */
+/*   Created: 2022/02/10 10:53:47 by mviinika          #+#    #+#             */
+/*   Updated: 2022/03/01 09:42:50 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	ft_swap(int *a, int *b)
+double	ft_pow(double num, double pow)
 {
-	*a ^= *b;
-	*b ^= *a;
-	*a ^= *b;
+	double	res;
+	int		counter;
+
+	res = 1;
+	counter = -1;
+	if (pow < 0)
+		return (0);
+	while (++counter < pow)
+		res *= num;
+	return (res);
 }
