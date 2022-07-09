@@ -6,7 +6,7 @@
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:13:57 by mviinika          #+#    #+#             */
-/*   Updated: 2022/03/01 09:49:33 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/03/11 13:40:05 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ char	*ft_strndup(const char *s, size_t size);
 int		ft_abs(int num);
 double	ft_pow(double num, double pow);
 int		bintodec(signed long long bin);
+size_t	ft_lenint(long long n);
 
 #endif

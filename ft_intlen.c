@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 10:53:47 by mviinika          #+#    #+#             */
-/*   Updated: 2022/06/12 21:37:10 by mviinika         ###   ########.fr       */
+/*   Created: 2022/03/11 13:37:55 by mviinika          #+#    #+#             */
+/*   Updated: 2022/03/11 13:39:42 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_pow(double num, double pow)
+size_t	ft_lenint(long long n)
 {
-	double	res;
-	int		counter;
+	int	len;
 
-	res = 1;
-	counter = -1;
-	if (pow < 0)
-		return (0);
-	if (num == 0 && pow)
-		return (1);	
-	while (++counter < pow)
-		res *= num;
-	return (res);
+	len = 1;
+	if (n < 0)
+	{
+		if (n == -2147483648)
+			n = n + 1;
+		n = n * -1;
+	}
+	while (n > 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
 }
