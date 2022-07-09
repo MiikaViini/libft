@@ -6,7 +6,7 @@
 #    By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 09:25:07 by mviinika          #+#    #+#              #
-#    Updated: 2022/07/09 12:32:45 by mviinika         ###   ########.fr        #
+#    Updated: 2022/07/09 13:47:31 by mviinika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,34 +33,38 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c \
 	ft_lstadd.c ft_lstnew.c ft_lstiter.c ft_lstmap.c \
 	ft_lstdelone.c ft_lstdel.c ft_strrev.c ft_lstrev.c \
 	ft_lstaddlast.c ft_isspace.c ft_swap.c ft_strndup.c \
-<<<<<<< HEAD
-	ft_pow.c ft_dectobin.c ft_bintodec.c ft_abs.c \
-	ft_intlen.c
-=======
 	ft_pow.c ft_dectobin.c ft_bintodec.c ft_abs.c ft_intlen.c \
-	ft_itoabase.c ft_ftoa.c ft_ltoa.c ft_utoa.c ft_putstrlen.c
->>>>>>> 398905f4415f8eca68f1e8eb952b814269cfab2a
-
-
+	ft_itoabase.c ft_ftoa.c ft_ltoa.c ft_utoa.c ft_putstrlen.c \
 
 OBJ = $(SRCS:.c=.o)
 
+FT_PRINTF = ft_printf/libftprintf.a
 
-INC = libft.h
+GET_NEXT_LINE_SRC = get_next_line/get_next_line.c
 
-FLAGS = -Wall -Wextra -Werror -g
+GET_NEXT_LINE_OBJ = get_next_line.o
+
+INC = libft.h ft_printf/ft_printf.h  get_next_line/get_next_line.h
+
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME):
+
 	@gcc -c $(FLAGS) $(SRCS)
 	@ar rcs $(NAME) $(OBJ)
+	make -C ./ft_printf/
+	cp $(FT_PRINTF) $(NAME)
+	@gcc -c $(FLAGS) $(SRCS) $(GET_NEXT_LINE_SRC) $(INC)
+	@ar rcs $(NAME) $(OBJ) *.o $(GET_NEXT_LINE_OBJ)
 clean:
 	@rm -f $(OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
 	@rm -f $(NAME:.a=.so)
+	@make fclean -C ./ft_printf
 
 re: fclean all
 

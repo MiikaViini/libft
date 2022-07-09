@@ -6,7 +6,7 @@
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:13:57 by mviinika          #+#    #+#             */
-/*   Updated: 2022/07/09 12:32:42 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/07/09 13:02:21 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include "ft_printf/ft_printf.h"
 # define CAPITAL 32
 
 typedef struct s_list
@@ -24,6 +25,7 @@ typedef struct s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
 
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memalloc(size_t size);
@@ -92,9 +94,6 @@ char	*ft_strndup(const char *s, size_t size);
 size_t	ft_abs(int num);
 double	ft_pow(double num, double pow);
 int		bintodec(signed long long bin);
-<<<<<<< HEAD
-size_t	ft_lenint(long long n);
-=======
 char	*ft_dectobin(long long num);
 size_t	ft_intlen(long long n);
 char	*ft_itoabase(unsigned long long int num, int base, int flag);
@@ -102,6 +101,5 @@ char	*ft_ftoa(long double num, int afterpoint);
 char	*ft_ltoa(long long int n);
 char	*ft_utoa(unsigned long long n);
 size_t	ft_putstrlen(char const *s);
->>>>>>> 398905f4415f8eca68f1e8eb952b814269cfab2a
 
 #endif
