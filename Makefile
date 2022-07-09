@@ -6,7 +6,7 @@
 #    By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 09:25:07 by mviinika          #+#    #+#              #
-#    Updated: 2022/03/11 13:40:37 by mviinika         ###   ########.fr        #
+#    Updated: 2022/07/09 12:32:45 by mviinika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,13 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c \
 	ft_lstadd.c ft_lstnew.c ft_lstiter.c ft_lstmap.c \
 	ft_lstdelone.c ft_lstdel.c ft_strrev.c ft_lstrev.c \
 	ft_lstaddlast.c ft_isspace.c ft_swap.c ft_strndup.c \
+<<<<<<< HEAD
 	ft_pow.c ft_dectobin.c ft_bintodec.c ft_abs.c \
 	ft_intlen.c
+=======
+	ft_pow.c ft_dectobin.c ft_bintodec.c ft_abs.c ft_intlen.c \
+	ft_itoabase.c ft_ftoa.c ft_ltoa.c ft_utoa.c ft_putstrlen.c
+>>>>>>> 398905f4415f8eca68f1e8eb952b814269cfab2a
 
 
 
@@ -43,19 +48,19 @@ OBJ = $(SRCS:.c=.o)
 
 INC = libft.h
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(FLAGS) $(SRCS)
-	ar rcs $(NAME) $(OBJ)
+	@gcc -c $(FLAGS) $(SRCS)
+	@ar rcs $(NAME) $(OBJ)
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
-	rm -f $(NAME:.a=.so)
+	@rm -f $(NAME)
+	@rm -f $(NAME:.a=.so)
 
 re: fclean all
 

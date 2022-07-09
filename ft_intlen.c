@@ -6,22 +6,21 @@
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 13:37:55 by mviinika          #+#    #+#             */
-/*   Updated: 2022/03/11 13:39:42 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/07/09 12:32:24 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_lenint(long long n)
+size_t	ft_intlen(long long n)
 {
-	int	len;
+	unsigned char	len;
 
-	len = 1;
+	len = 0;
 	if (n < 0)
 	{
-		if (n == -2147483648)
-			n = n + 1;
-		n = n * -1;
+		n = ~n;
+		n++;
 	}
 	while (n > 0)
 	{

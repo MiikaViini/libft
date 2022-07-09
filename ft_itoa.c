@@ -6,7 +6,7 @@
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 09:39:49 by mviinika          #+#    #+#             */
-/*   Updated: 2021/12/26 12:29:48 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:50:44 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	ft_lenint(int n)
 	unsigned char	len;
 
 	len = 1;
-	if (n < 0 )
+	if (n < 0)
 	{
 		if (n == -2147483648)
 			n = n + 1;
@@ -63,7 +63,7 @@ char	*ft_itoa(int n)
 	n = ft_ismin(n);
 	n = ft_remsign(n);
 	i = 0;
-	num = (char *)malloc(sizeof(char) * (ft_lenint(t) + 1));
+	num = ft_strnew(ft_lenint(t) + 1);
 	if (!num)
 		return (NULL);
 	if (n == 0)

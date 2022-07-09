@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 08:46:45 by mviinika          #+#    #+#             */
-/*   Updated: 2022/03/30 13:52:48 by mviinika         ###   ########.fr       */
+/*   Created: 2022/03/19 12:06:49 by mviinika          #+#    #+#             */
+/*   Updated: 2022/03/23 13:59:32 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+static size_t	intlen(unsigned long long n)
 {
-	size_t	i;
+	int	len;
 
-	i = 0;
-	while (src[i])
+	len = 1;
+	while (n > 0 && len++)
+		n = n / 10;
+	return (len);
+}
+
+char	*ft_utoa(unsigned long long n)
+{
+	char				*res;
+	size_t				len;
+
+	len = intlen(n);
+	res = ft_strnew(len);
+	len--;
+	while (n && len--)
 	{
-		if (n == 0)
-			return (dest);
-		dest[i] = src[i];
-		i++;
-		n--;
+		res[len] = (n % 10) + '0';
+		n /= 10;
 	}
-	while (n--)
-		dest[i++] = '\0';
-	return (dest);
+	return (res);
 }

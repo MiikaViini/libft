@@ -6,29 +6,48 @@
 /*   By: mviinika <mviinika@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 13:48:10 by mviinika          #+#    #+#             */
-/*   Updated: 2022/03/01 09:52:34 by mviinika         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:16:09 by mviinika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_dectobin(int dec)
+static unsigned long long	treat_minus(long long num, int *sign)
 {
-	int		res;
-	int		bin[16];
-	size_t	i;
+	unsigned long long	res;
 
-	res = 0;
+	if (num == -9223372036854775807 - 1)
+	{
+		num++;
+		res = (num * -1) + 1;
+	}
+	else
+		res = num * -1;
+	*sign = 1;
+	return (res);
+}
+
+char	*ft_dectobin(long long num)
+{
+	char				*bin;
+	size_t				i;
+	unsigned long long	res;
+	int					sign;
+
 	i = 0;
-	while (dec > 0)
+	bin = ft_strnew(64);
+	bin[0] = '0';
+	sign = 0;
+	if (num < 0)
+		res = treat_minus(num, &sign);
+	else
+		res = num;
+	while (res)
 	{
-		bin[i] = dec % 2;
-		dec /= 2;
-		i++;
+		bin[i++] = (res % 2) + '0';
+		res /= 2;
 	}
-	while (i--)
-	{
-		ft_putnbr(bin[i]);
-	}
-	ft_putchar('\n');
+	if (sign)
+		bin[i] = '-';
+	return (ft_strrev(bin));
 }
